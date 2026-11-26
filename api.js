@@ -36,3 +36,15 @@ export async function updateRequest(id,patch,req){
   st[id]=next;save(st);return{...req,...next};
 }
 export function resetDemo(){localStorage.removeItem(LS);localStorage.removeItem('fw.inbox')}
+
+/* Sensitive reference data (client national ID/address, worker passport). Demo only: fake values from data.js.
+   In production these come from the authenticated API (GET /clients, GET /workers), never from static files. */
+export async function listClients(){
+  if(API_BASE){const r=await fetch(API_BASE+'/clients');return r.json()}
+  return window.FW_DEMO?.clients||{};
+}
+export async function listWorkers(){
+  if(API_BASE){const r=await fetch(API_BASE+'/workers');return r.json()}
+  return window.FW_DEMO?.workers||[];
+}
+export const STAGES={ready:{ar:'جاهز للترشيح',color:'#2563eb'},selected:{ar:'تم اختياره',color:'#b8860b'},visa:{ar:'إجراءات التأشيرة',color:'#0891b2'},travel:{ar:'في الطريق',color:'#7c3aed'},arrived:{ar:'وصل وتم التسليم',color:'#16803c'}};

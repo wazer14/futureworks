@@ -83,3 +83,4 @@ input:focus,textarea:focus{outline:2px solid var(--gold);border-color:transparen
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 
 .mini{flex-wrap:wrap}.mini b{white-space:nowrap}
+.val .link-btn,.d-sec .link-btn{color:#9a7a38;text-decoration:underline;font-size:12.5px;margin-inline-start:6px}.val .link-btn:hover{color:var(--navy)}

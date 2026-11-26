@@ -8,13 +8,14 @@
 <link rel="stylesheet" href="admin.css">
 </head>
 <body>
-<div class="demo-bar">نسخة تجريبية ببيانات وهمية. لا تدخل بيانات عملاء حقيقية قبل ربط الخادم وتفعيل تسجيل الدخول.</div>
+<div class="demo-bar">نسخة تجريبية ببيانات وهمية. الهويات والعناوين وأرقام الجوازات هنا وهمية. لا تدخل بيانات حقيقية قبل ربط الخادم وتفعيل تسجيل الدخول.</div>
 <div class="app">
   <aside class="side" id="side">
     <div class="logo"><span class="mark">F</span><div><b>أعمال المستقبل</b><small>لوحة الإدارة</small></div></div>
     <nav>
       <button class="nav-btn active" data-view="requests"><i>▤</i> الطلبات <em id="cnt-new"></em></button>
       <button class="nav-btn" data-view="clients"><i>◉</i> العملاء</button>
+      <button class="nav-btn" data-view="workers"><i>▣</i> العمالة</button>
       <button class="nav-btn" data-view="board"><i>▥</i> لوحة الحالات</button>
     </nav>
     <div class="side-foot">
@@ -27,7 +28,7 @@
       <button class="burger" id="burger" aria-label="القائمة">☰</button>
       <h1 id="title">الطلبات</h1>
       <div class="top-tools">
-        <input id="q" type="search" placeholder="ابحث بالاسم أو الجوال أو رقم الطلب">
+        <input id="q" type="search" placeholder="ابحث بالاسم أو الجوال أو رقم الطلب أو الهوية">
         <button class="btn" id="export">تصدير CSV</button>
       </div>
     </header>
